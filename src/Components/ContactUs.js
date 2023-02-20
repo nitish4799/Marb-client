@@ -28,7 +28,7 @@ const ContactUs = () => {
     e.preventDefault();
     const {name, email, phone_number, query} = contactQuery;
     if ( name && email && phone_number && query) {
-      axios.post('http://localhost:5000/contactus' , contactQuery)
+      axios.post('https://gold-zealous-newt.cyclic.app/contactus' , contactQuery)
       .then((res) => {
         alert("Message sent successfully");
         setContactQuery({
