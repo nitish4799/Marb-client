@@ -39,7 +39,7 @@ const SignUpPop = ({ closeModal }) => {
     e.preventDefault();
     const {name, email, phone_number, city} = userDetails;
     if( name && email && city && phone_number ) {
-      axios.post('http://localhost:5000/products' , userDetails)
+      axios.post('https://gold-zealous-newt.cyclic.app/products' , userDetails)
       .then(res => {
         alert(res.data.status);
         closeModal();
@@ -55,7 +55,7 @@ const SignUpPop = ({ closeModal }) => {
     e.preventDefault();
     const {email , phone_number} = loginDetails;
     if ( email && phone_number ) {
-      axios.post('http://localhost:5000/login' , loginDetails)
+      axios.post('https://gold-zealous-newt.cyclic.app/login' , loginDetails)
       .then((res) => {
         const {status} = res.data;
         if ( status === "Log In Successful") {

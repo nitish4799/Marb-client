@@ -53,7 +53,7 @@ const Enquiry = () => {
             }));
             setTempMessages([]);
           }
-        axios.post('http://localhost:5000/enquirycart' , enquiryMessage)
+        axios.post('https://gold-zealous-newt.cyclic.app/enquirycart' , enquiryMessage)
         .then((res) => {
             alert("Enquiry Sent");
             setEnquiryMessage({
