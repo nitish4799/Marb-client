@@ -5,6 +5,7 @@ import { MdLocationOn } from "react-icons/md";
 import { TfiEmail } from "react-icons/tfi";
 import { IoMdCall } from "react-icons/io";
 import axios from 'axios';
+import './Contact.css';
 
 
 const ContactUs = () => {
@@ -47,7 +48,7 @@ const ContactUs = () => {
   return (
     <>
       <div className="aboutbg pt-5 pb-5 mb-3">
-        <div className="pt-5 pb-5 align-items-center">
+        <div className="pt-5 pb-5 text-center">
           <Link className="abtxt pt-5 pb-5">Contact Us</Link>
         </div>
       </div>

@@ -17,7 +17,7 @@ const Talk = () => {
         </div>
     </div>
 
-    <div className='bg-dark mt-5 d-flex justify-content-center'>
+    <div className='bg-dark mt-5 d-flex justify-content-center flex-wrap'>
 
     <div className="card text-center d-flex m-5" >
       <div className="card-body">

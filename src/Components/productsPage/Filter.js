@@ -2,7 +2,7 @@ import React from "react";
 import { MdLocationOn, MdCategory } from "react-icons/md";
 import { FaHome, FaRupeeSign } from "react-icons/fa";
 import { useFilterContext } from "../../Context/Filter_Context";
-
+import './Filter.css';
 
 const Filter = () => {
 
@@ -31,13 +31,13 @@ const Filter = () => {
     <>
       <div className="filter d-flex justify-content-center">
         <div className="filter-box px-4">
-          <div className="d-flex">
+          {/* <div className="d-flex"> */}
 
             <div className="d-flex">
               <div className="mx-2">
                 <MdLocationOn />
               </div>
-              <div className="propdiv ">
+              <div className="propdiv">
                 <select
                   className="property text-muted"
                   placeholder="op"
@@ -142,7 +142,7 @@ const Filter = () => {
               </div>
             </div>
 
-          </div>
+          {/* </div> */}
         </div>
 
         {/* <div className='d-flex mx-2'>

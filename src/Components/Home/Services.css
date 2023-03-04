@@ -1,16 +1,54 @@
-.our{
-    color: #244a92;
+*{
+    margin:0;
+    padding:0;
 }
-.marbanime{
-    font-weight: 650;
-    color: #181818;
+.cards-containers{
+    display:flex;
+    justify-content:center;
+    margin-top:100px;
+    /* height:500px; */
+    height: auto;
+    flex-wrap: wrap;
 }
 .cards{
-    padding-left: 17%;
-    padding-right: 17%;
-    padding-top: 3%;
-    gap: 2%;
+    display:flex;
+    justify-content: center;
+    margin:5px;
 }
-.icon{
-    size: 100px;
+.cards-image{
+    width:300px;
+    background-color: #aeb8be;
+    height: 30rem;
 }
+@keyframes hover{
+    50%{
+        transform:translateY(-5px);
+    }
+    100%{
+        transfrom:translateY(-10px);
+    }
+}
+.cards-image.cards-1:hover,
+.cards-image.cards-2:hover,
+.cards-image.cards-3:hover,
+.cards-image.cards-4:hover{
+    transform:translateY(-10px);
+    animation-name:hover;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+    transform:translateY(-10px);
+}
+.cards-image.cards-1:hover{
+    box-shadow: 0 80px 80px -60px #591623;
+}
+.cards-image.cards-2:hover{
+    box-shadow: 0 80px 80px -60px #1B80BF;
+  
+}
+.cards-image.cards-3:hover{
+    box-shadow: 0 80px 80px -60px #3F5559;
+}
+.cards-image.cards-4:hover{
+    box-shadow: 0 80px 80px -60px #5B0373;
+}
+

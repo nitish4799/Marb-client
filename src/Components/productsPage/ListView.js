@@ -21,11 +21,11 @@ const ListView = ({products}) => {
 
             return (
                 <div className='container grid grid-two-column' key={pid}>
-                <Link to={`/singleproduct/${pid}`}>
-                    <figure>
-                        <img src={image} alt={name}/>
-                    </figure>
-                </Link>
+                    <Link to={`/singleproduct/${pid}`}>
+                        <figure>
+                            <img src={image} alt={name}/>
+                        </figure>
+                    </Link>
                     <div className='card-data'>
                         <h3>{name}</h3>
                         <p><FormatPrice price={price}/></p>
@@ -33,7 +33,6 @@ const ListView = ({products}) => {
                         <AddToCart pid={pid} />
                     </div>
                 </div>
-
             );
         })}
 

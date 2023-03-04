@@ -10,7 +10,7 @@ const About = () => {
   return (
     <>
       <div className="aboutbg pt-5 pb-5 mb-3">
-        <div className="pt-5 pb-5 align-items-center">
+        <div className="pt-5 pb-5 text-center">
           <Link className="abtxt pt-5 pb-5">About Us</Link>
         </div>
       </div>

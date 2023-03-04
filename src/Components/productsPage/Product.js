@@ -13,14 +13,17 @@ const Product = (curElem) => {
 
   return (
     <>
+    <div>
       <Link to={`/singleproduct/${pid}`}>
-        <img className="proimg" src={image} alt="Sample"/></Link>
-        <div className="text">
-          <h3>{name}</h3>
-          <del><p><FormatPrice price={price + 200}/></p></del>
-          <p><FormatPrice price={price}/></p>
-          <AddToCart pid ={pid} />
-        </div>
+        <img className="proimg" src={image} alt="Sample"/>
+      </Link>
+      <div className="text">
+        <h3>{name}</h3>
+        <del><p><FormatPrice price={price + 200}/></p></del>
+        <p><FormatPrice price={price}/></p> 
+        <AddToCart pid ={pid} />
+      </div>
+    </div>
     </>
   );
 };

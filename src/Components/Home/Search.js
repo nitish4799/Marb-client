@@ -3,6 +3,7 @@ import { MdLocationOn, MdSearch, MdCategory } from "react-icons/md";
 import { FaHome, FaRupeeSign } from "react-icons/fa";
 import { useFilterContext } from "../../Context/Filter_Context";
 import { Link } from "react-router-dom";
+import './Search.css'
 
 const Search = () => {
   const { all_products, updateFilterValue } = useFilterContext();
@@ -84,7 +85,7 @@ const Search = () => {
                   style={{ display: "none" }}
                   value="default"
                 >
-                  Property Type
+                  Property Type     
                 </option>
                 {propertyOnlyData.map((curElem, index) => {
                   return (

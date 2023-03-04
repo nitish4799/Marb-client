@@ -5,7 +5,10 @@ import axios from 'axios';
 
 const SignUpPop = ({ closeModal }) => {
 
+  axios.defaults.withCredentials = true;
+
   const [signup , setSignup] = useState(true);
+  const [otp , setOtp] = useState(true);
 
   const [userDetails , setUserDetails] = useState({
     name: "",
@@ -15,9 +18,14 @@ const SignUpPop = ({ closeModal }) => {
   });
 
   const [loginDetails, setLoginDetails] = useState({
-    email:"",
     phone_number:""
   });
+
+  const [verifyDetails, setVerifyDetails] = useState({
+    phone:"",
+    hash: "",
+    otp: ""
+  })
 
   const changeHandler = (e) => {
     const {name , value} = e.target;
@@ -33,6 +41,18 @@ const SignUpPop = ({ closeModal }) => {
       ...loginDetails,
       [name]:value
     })
+    setVerifyDetails({
+      ...verifyDetails,
+      [name]: value
+    })
+  };
+
+  const changeHandlerOtp = (e) => {
+    const { name, value } = e.target;
+    setVerifyDetails({
+      ...verifyDetails,
+      [name] : value
+    })
   };
 
   const registerHandle = async(e) => {
@@ -42,7 +62,8 @@ const SignUpPop = ({ closeModal }) => {
       axios.post('https://gold-zealous-newt.cyclic.app/products' , userDetails)
       .then(res => {
         alert(res.data.status);
-        closeModal();
+        setSignup(false);
+        // closeModal();
       })
       .catch((err)=>console.log(err));
     }
@@ -51,28 +72,82 @@ const SignUpPop = ({ closeModal }) => {
     }
   }
 
-  const loginHandle = async(e) => {
+  // const loginHandle = async(e) => {
+  //   e.preventDefault();
+  //   const {phone_number} = loginDetails;
+  //   if ( phone_number ) {
+  //     axios.post('https://gold-zealous-newt.cyclic.app/login' , loginDetails)
+  //     .then((res) => {
+  //       const {status} = res.data;
+  //       if ( status === "Log In Successful") {
+  //         alert(status);
+  //         // closeModal();
+  //       }
+  //       if(status === "User not found" ) {
+  //         alert(status);
+  //         setSignup(true);
+  //       }
+  //     })
+  //     .catch((err) => console.log(err));
+  //   }
+  //   else{
+  //     alert("Please enter credientials")
+  //   }
+  // }
+
+  const sendOtpHandle = async(e) => {
     e.preventDefault();
-    const {email , phone_number} = loginDetails;
-    if ( email && phone_number ) {
-      axios.post('https://gold-zealous-newt.cyclic.app/login' , loginDetails)
+    const {phone_number} = loginDetails;
+    if ( phone_number ) {
+      axios.post('http://localhost:5000/login' , loginDetails)
       .then((res) => {
-        const {status} = res.data;
-        if ( status === "Log In Successful") {
-          alert(status);
-          closeModal();
+        const { status } = res.data;
+
+        if ( status === "User found")
+        {
+          setOtp(false);
+          axios.post('http://localhost:5000/sendotp' , loginDetails)
+          .then((res) => {
+            verifyDetails.phone = res.data.phone;
+            verifyDetails.hash = res.data.hash;
+            alert(res.data.message);
+          })
+          .catch((err) => console.log(err))
         }
-        if(status === "User not found" ) {
+        if ( status === "User not found" ) {
           alert(status);
           setSignup(true);
         }
       })
       .catch((err) => console.log(err));
     }
-    else{
-      alert("Please enter credientials")
+    else {
+      alert("Please enter your number");
     }
   }
+
+  const submitOtpHandle = async(e) => {
+    e.preventDefault();
+    const { otp } = verifyDetails;
+    if ( otp ) {
+      axios.post('http://localhost:5000/verifyotp' , verifyDetails)
+      .then((res) => {
+        // const { status } = res.data;
+        if ( res.status === 202 ) {
+          console.log(res.data);
+          window.location.reload(); //pta nhi kyu 
+          alert('Log In Successful');
+          closeModal();
+        }
+      })
+      .catch((err) => console.log(err));
+    }
+    else {
+      alert("Please Enter your OTP")
+    }
+  }
+
+
 
   useEffect(() => {
     document.body.style.overflowY = "hidden";
@@ -102,13 +177,25 @@ const SignUpPop = ({ closeModal }) => {
                   <p className="mt-2">already registered ?<span onClick={() => {setSignup(false)}}>Log In</span></p>
                 </form>
                 :
-                <form action="post" onSubmit={loginHandle}>
-                  <h2>Log in</h2>
-                  <input type="email" name="email" id="email" placeholder="Email" onChange={changeHandlerLogin} value={loginDetails.email} required/>
+                <>
+                {otp ? 
+                <form action="post" onSubmit={sendOtpHandle}>
+                  <h2>Log In</h2>
+                  {/* <input type="email" name="email" id="email" placeholder="Email" onChange={changeHandlerLogin} value={loginDetails.email} required/> */}
                   <input type="text" name="phone_number" placeholder="Phone Number" onChange={changeHandlerLogin} value={loginDetails.phone_number} required/>
-                  <button className="btn btn-warning mt-2" type="submit" onClick={loginHandle}>Log in</button>
+                  <button className="btn btn-warning mt-2" type="submit" onClick={sendOtpHandle}>Send OTP</button>
                   <p className="mt-2">New user ? <span onClick={() => setSignup(true)}>Register</span></p>
                 </form>
+                :
+                <form action="post" onSubmit={submitOtpHandle}>
+                  <h2>Log In</h2>
+                  <input type="text" name="phone_number" placeholder="Phone Number" value={verifyDetails.phone} required/>
+                  <input type="text" name="otp" placeholder="OTP" onChange={changeHandlerOtp} value={verifyDetails.otp} required/>
+                  <button className="btn btn-warning mt-2" type="submit" onClick={submitOtpHandle}>Submit</button>
+                  <p className="mt-2">New user ? <span onClick={() => setSignup(true)}>Register</span></p>
+                </form>
+                }
+                </>
               }
               </div>
             </div>

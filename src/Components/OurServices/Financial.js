@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import '../About.css'
+// import '../About.css'
+import './fin.css';
 
 const Financial = () => {
   return (
@@ -10,7 +11,7 @@ const Financial = () => {
         <Link to='/financialanalyst/calci' ><button className='btn btn-primary mt-5'>Flooring Caluclator</button> </Link>
     </div>
 
-    <div className='abtinfo m-5 p-5'>
+    <div className='serbg p-5'>
       <h2>Financial Analyst</h2><br></br><br></br>
       <small>Installing a new floor in your home can be a substantial challenge – unless you’re using our flooring calculator! Whether you’re constructing your dream house and choosing floor finishes, or just replacing old and used panels in an apartment, you are bound to deal with the same problems – measuring the space and estimating the cost of flooring. And while the calculations are relatively simple, we know math is the last thing you want to do while you’re renovating.</small><br></br><br></br>
       <small>We created this square foot calculator for the flooring to take the maths off your plate. Thanks to this tool, you can quickly estimate the flooring cost and calculate how much hardwood, vinyl, or laminate flooring you need to install. With our help, any construction project is going to be a breeze!</small><br></br><br></br>

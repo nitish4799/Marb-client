@@ -1,15 +1,16 @@
-import React from 'react'
+import React from 'react';
+import './fin.css';
 
 const Selection = () => {
   return (
     <>
-        <span style={{ fontWeight: "bold" }}></span><br></br><br></br>
+    <span style={{ fontWeight: "bold" }}></span><br></br><br></br>
 
     <div className='text-center'><h2>Marble Selection Consultancy</h2></div>
     <div className='d-flex justify-content-center m-5 p-5'>
         <button className='btn btn-primary'>Marble Studio Tour</button>
     </div>
-    <div className='abtinfo m-5 p-5'>
+    <div className='serbg p-5'>
         <span style={{ fontWeight: "bold" }}>Variety</span><br></br><br></br>
         <small>Marble was the choice of the royals for its inimitable luxury. This stone comes in numerous colours and vein patterns. Being a natural derivative, each slab is unique, with its own distinct grain. India has rich marble deposits in states like Rajasthan, Gujarat, Madhya Pradesh and Andhra Pradesh.</small><br></br><br></br>
         <small>One can choose from Makrana, Calacatta, Andhi, Rajnagar, Ambaji, Katni Beige, Udaipur Pink and many other marble stones that are native to the country. You can pick marble slabs local to your area or can get them imported, too.</small><br></br><br></br>

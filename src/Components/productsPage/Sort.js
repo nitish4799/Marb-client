@@ -10,7 +10,7 @@ const Sort = () => {
   return (
     <>
         <div className='container d-flex justify-content-between my-5 py-3'>
-            <div className='d-flex'>
+            <div className='d-flex justify-content-center'>
                 <button className={grid_view ? 'active sort-btn' : 'sort-btn' } onClick={setGridView}>
                     <BsFillGridFill/>
                 </button>
@@ -18,10 +18,10 @@ const Sort = () => {
                     <BsList/> 
                 </button>
             </div>
-            <div>
-                <p>{`${filter_products.length}`} products available</p>
+            <div className='mt-3'>
+                <p className='text-center'>{`${filter_products.length}`} products available</p>
             </div>
-            <div>
+            <div className='d-flex justify-content-center mt-2'>
                 <form action='#'>
                     <label htmlFor='sort'></label>
                     <select name='sort' id='sort' onClick={sorting}>

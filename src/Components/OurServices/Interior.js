@@ -1,10 +1,9 @@
 import React from 'react';
-import '../About.css'
-
+import './fin.css';
 const Interior = () => {
   return (
     <>
-    <div className='abtinfo m-5 p-5'>
+    <div className='serbg p-5'>
     <h2>Interior Design</h2><br></br><br></br>
         <small>The lower level, comprising the living room, dining room and two bedrooms, is occupied by the parents, while the son resides on the upper floor that has a living room and a bedroom. Spacious decks on both floors ensure the seamless merging of the outdoors with the indoors.</small><br></br><br></br>
         <small>The tree of light jali work is an interesting feature separating the puja room and the living room. The vintage-looking cane chairs are customised by Magari, as is the rest of the furniture in the house</small><br></br><br></br>

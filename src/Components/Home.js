@@ -10,8 +10,8 @@ import Talk from './Home/Talk';
 const Home = () => {
   return (
     <>
-    <Carousel/>
     <Search/>
+    <Carousel/>
     <Services/>
     <Products/>
     <Talk/>

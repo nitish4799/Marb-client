@@ -72,11 +72,15 @@ const Enquiry = () => {
 
   return (
     <>
-
         <div className='container p-5'>
-            <div>
-                <table className='table'>
-                    <thead className='thead-dark'>
+        { cart.length === 0 ?
+       null
+         :
+           <>
+            <div className='table'>
+                <table className='rwd-table'>
+                <tbody>
+                    {/* <thead className='thead-dark'> */}
                         <tr>
                             <th>Product</th>
                             <th>Name</th>
@@ -84,8 +88,7 @@ const Enquiry = () => {
                             <th className='text-center'>Your Message</th>
                             <th>Remove</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                    {/* </thead> */}
                         {
                             cart.map((curElem) => {
                                 const temp = new Array(2);
@@ -93,17 +96,17 @@ const Enquiry = () => {
                                 const {id, name , price, image} = curElem;
                                 return (
                                     <tr key={name}>
-                                        <td><img className='cartimage' src={image} alt={name}/></td>
-                                        <td>{name}</td>
-                                        <td><FormatPrice price={price} /> </td>
-                                        <td className='text-center'><textarea className='' onChange={(e) => {
+                                        <td data-th='Product'><img className='cartimage' src={image} alt={name}/></td>
+                                        <td data-th='Name'>{name}</td>
+                                        <td data-th='Price'><FormatPrice price={price} /> </td>
+                                        <td data-th='Message'><textarea className='' onChange={(e) => {
                                              temp[1] = e.target.value;
                                              setTempMessages((prevTempMessages) => [
                                             ...prevTempMessages,
                                             temp,
                                         ]);
                                         }}></textarea></td>
-                                        <td><MdDelete onClick={() => {removeItem(id)}}/></td>
+                                        <td data-th="Remove"><MdDelete onClick={() => {removeItem(id)}}/></td>
                                     </tr>
                                 )
                             })
@@ -111,13 +114,15 @@ const Enquiry = () => {
                     </tbody>
                 </table>
             </div>
-
-            <div className='d-flex justify-content-between'>
-                <Link to="/products"><button type="button" className="btn btn-primary">Browse More Products</button></Link>
-                <button type="button" className="btn btn-danger" onClick={clearCart }>Clear Cart</button>
+            <div className='d-flex justify-content-center flex-wrap'>
+                <Link to="/products"><button type="button" className="btn btn-primary mx-2 my-2">Browse More Products</button></Link>
+                <button type="button" className="btn btn-danger mx-2 my-2" onClick={clearCart }>Clear Cart</button>
             </div>
+          </>
+           
+        }
 
-            <div className='d-flex flex-column gap-4 p-5 m-5'>
+            <div className='msgbox d-flex flex-column gap-4 mt-5'>
                 <input placeholder='NAME' name="name" id='name' type="text" value={enquiryMessage.name} onChange={changeHandler}></input>
                 <input placeholder='EMAIL' name='email' id='email' type='text' value={enquiryMessage.email} onChange={changeHandler}></input>
                 <input placeholder='PHONE NUMBER' value={enquiryMessage.phone_number} name='phone_number' type="number" id='phone_number' onChange={changeHandler} ></input>
