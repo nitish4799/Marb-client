@@ -110,6 +110,7 @@ const SignUpPop = ({ closeModal }) => {
           .then((res) => {
             verifyDetails.phone = res.data.phone;
             verifyDetails.hash = res.data.hash;
+            console.log(res.data.otp);
             alert(res.data.message);
           })
           .catch((err) => console.log(err))
