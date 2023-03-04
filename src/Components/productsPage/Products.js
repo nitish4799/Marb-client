@@ -50,7 +50,7 @@ import { useProductContext } from "../../Context/ProductContext";
 
 const Products = () => {
   const { isLoading } = useProductContext();
-  const [showSignUp, setShowSignUp] = useState(false);
+  const [showSignUp, setShowSignUp] = useState(true);
 
   const closeModal = () => setShowSignUp(false);
 

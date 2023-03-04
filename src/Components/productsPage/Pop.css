@@ -22,7 +22,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 60rem;
+    /* max-width: 60rem; */
     background-color: aliceblue;
     padding: 2rem 3rem;
     border-radius: 0.5rem;
@@ -94,5 +94,23 @@ h2 {
   }
   .mg{
     width: 65%;
+}
+
+@media ( max-width: 1127px){
+  .imgBx{
+    display: none;
+  }
+  .formBx{
+    width: 100%;
+    padding: 20px;
+  }
+  .modal-container{
+    padding: 0%;
+  }
+}
+@media (max-width:600px) {
+  .modal-container{
+    width: 90%;
+  }
 }
   

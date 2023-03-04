@@ -99,14 +99,14 @@ const SignUpPop = ({ closeModal }) => {
     e.preventDefault();
     const {phone_number} = loginDetails;
     if ( phone_number ) {
-      axios.post('http://localhost:5000/login' , loginDetails)
+      axios.post('https://gold-zealous-newt.cyclic.app/login' , loginDetails)
       .then((res) => {
         const { status } = res.data;
 
         if ( status === "User found")
         {
           setOtp(false);
-          axios.post('http://localhost:5000/sendotp' , loginDetails)
+          axios.post('https://gold-zealous-newt.cyclic.app/sendotp' , loginDetails)
           .then((res) => {
             verifyDetails.phone = res.data.phone;
             verifyDetails.hash = res.data.hash;
@@ -130,7 +130,7 @@ const SignUpPop = ({ closeModal }) => {
     e.preventDefault();
     const { otp } = verifyDetails;
     if ( otp ) {
-      axios.post('http://localhost:5000/verifyotp' , verifyDetails)
+      axios.post('https://gold-zealous-newt.cyclic.app/verifyotp' , verifyDetails)
       .then((res) => {
         // const { status } = res.data;
         if ( res.status === 202 ) {
