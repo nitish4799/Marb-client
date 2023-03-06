@@ -106,7 +106,7 @@ const SignUpPop = ({ closeModal }) => {
         if ( status === "User found")
         {
           setOtp(false);
-          axios.post('https://gold-zealous-newt.cyclic.app/sendotp' , loginDetails)
+          axios.post('http://localhost:5000/sendotp' , loginDetails)
           .then((res) => {
             verifyDetails.phone = res.data.phone;
             verifyDetails.hash = res.data.hash;
