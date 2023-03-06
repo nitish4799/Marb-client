@@ -58,7 +58,7 @@ const Products = () => {
     if (!Auth.isAuthenticated()) {
       setTimeout(() => {
         setShowSignUp(true);
-      }, 15000);
+      }, 3000);
     }
   }, []);
 

@@ -131,10 +131,11 @@ const SignUpPop = ({ closeModal }) => {
     e.preventDefault();
     const { otp } = verifyDetails;
     if ( otp ) {
+      axios.defaults.withCredentials = true;
       axios.post('https://gold-zealous-newt.cyclic.app/verifyotp' , verifyDetails)
       .then((res) => {
         // const { status } = res.data;
-        if ( res.data.msg === "Device Confirmed" ) {
+        if ( res.data === "Device Confirmed" ) {
           console.log(res.data);
           // window.location.reload(); //pta nhi kyu 
           alert('Log In Successful');
