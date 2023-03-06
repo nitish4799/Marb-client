@@ -106,7 +106,7 @@ const SignUpPop = ({ closeModal }) => {
         if ( status === "User found")
         {
           setOtp(false);
-          axios.post('http://localhost:5000/sendotp' , loginDetails)
+          axios.post('https://gold-zealous-newt.cyclic.app/sendotp' , loginDetails)
           .then((res) => {
             verifyDetails.phone = res.data.phone;
             verifyDetails.hash = res.data.hash;
@@ -132,7 +132,7 @@ const SignUpPop = ({ closeModal }) => {
     const { otp } = verifyDetails;
     if ( otp ) {
       axios.defaults.withCredentials = true;
-      axios.post('http://localhost:5000/verifyotp' , verifyDetails)
+      axios.post('https://gold-zealous-newt.cyclic.app/verifyotp' , verifyDetails)
       .then((res) => {
         // const { status } = res.data;
         if ( res.data === "Device Confirmed" ) {
