@@ -2,6 +2,7 @@ import React from 'react';
 import './Footer.css';
 import logo from '../../Images/logo.png';
 import { Link } from 'react-router-dom';
+import { BsInstagram } from "react-icons/bs";
 
 const Footer = () => {
   return (
@@ -28,7 +29,7 @@ const Footer = () => {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="/">
+                                        <Link to="https://www.instagram.com/marblegram_official/">
                                             <i className="fab fa-twitter"></i>
                                         </Link>
                                     </li>

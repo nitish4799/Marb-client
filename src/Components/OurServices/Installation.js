@@ -4,7 +4,36 @@ import './fin.css';
 const Installation = () => {
   return (
     <>
-        <div>videos</div>
+        <div>
+          <div className="csslider infinity" id="slider1">
+          <input type="radio" name="slides"  id="slides_1"/>
+          <input type="radio" name="slides" id="slides_2"/>
+          <input type="radio" name="slides" id="slides_3"/>
+            <ul>
+              <li>
+            <iframe width="100%" height="400px" src="https://www.youtube.com/embed/lP7B9B7WX1E" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+              </li>
+              <li>
+                <p>
+                <iframe width="100%" height="400px" src="https://www.youtube.com/embed/_hxp3c5j-WA" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                </p>
+              </li>
+              <li>
+                <p>
+                <iframe width="100%" height="400px" src="https://www.youtube.com/embed/Nj8pWF7I2pU" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                </p>
+              </li>
+            </ul>
+              <div className="navigation"> 
+                <div>
+                  <label htmlFor="slides_1"></label>
+                  <label htmlFor="slides_2"></label>
+                  <label htmlFor="slides_3"></label>
+                </div>
+              </div>
+          </div>
+        </div>
+
         <div className='serbg p-5'>
             <h2>Installation and Finishing</h2><br></br>
             <small>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of LYou have bought the most gorgeous tiles and are all set to get the floor of your dreams. Pause and count to ten. Getting the floor tiles installed correctly is as important as choosing the right tile, because a shoddy job can mar the beauty of your very expensive tiles. Premium-quality tiles, along with correct application techniques and good workmanship, create floors that last. A good tile contractor is essential to ensure that the installation is done smoothly and skillfully. Here are some tips about things to look out for.</small><br></br><br></br>

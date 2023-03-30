@@ -129,14 +129,14 @@ const Filter = () => {
               </div>
               <div>
                 <select className="budget text-muted" name="price" onChange={updateFilterValue} id="mySelect4">
-                    <optgroup label="Max. Price">
+                    <optgroup label="Max. Price(per sq. ft.)">
                     <option style={{ display: "none" }} value="default">Budget</option>
-                    <option value="1">1200</option>
-                    <option>1400</option>
-                    <option>1600</option>
-                    <option>1800</option>
-                    <option>2000</option>
-                    <option>2200</option>
+                    <option value="1">40</option>
+                    <option>100</option>
+                    <option>200</option>
+                    <option>500</option>
+                    <option>800</option>
+                    <option>1000</option>
                     </optgroup>
                 </select>
               </div>

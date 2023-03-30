@@ -1,0 +1,172 @@
+ *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ body {
+    font-family: "Roboto", sans-serif;
+}
+.cs-1{
+    background-image: url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2000&q=80");
+}
+.cs-2{
+    background-image: url("https://images.pexels.com/photos/7598120/pexels-photo-7598120.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+.cs-3{
+    background-image: url("https://images.pexels.com/photos/11296229/pexels-photo-11296229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    color: black;
+}
+.c-slider{
+    overflow: hidden;
+    background-color: black;
+}
+.c-slide {
+    display: inline-flex !important;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    will-change: background-size;
+    position: relative;
+    transition: 1s ease;
+    transition-delay: 0.4s;
+}
+.c-slide:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.61) 76%); */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#9c000000", GradientType=0);
+    /* background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.61) 76%); */
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.61) 76%); */
+}
+.c-slide-content {
+    padding: 2rem;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 2;
+    max-width: 1200px;
+}
+.c-slide__title {
+    /* font-family: "Cormorant Garamond", serif; */
+    font-size: 4em;
+    font-weight: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 0.8s ease;
+    will-change: opacity, transform;
+    /* color: #6fa4ff; */
+}
+.c-slide__title--large, .c-slide__title--medium {
+    font-family: "Cormorant Garamond", serif;
+    display: block;
+    font-size: 2.5em;
+    line-height: 110px;
+    transform: translateY(150px);
+    will-change: transform;
+    transition-delay: 0.4s;
+    position: relative;
+    transition: 1s ease;
+}
+.c-slide__title--medium {
+    font-size: 1.6em;
+    line-height: 100px;
+}
+.c-slide__subtitle {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.c-slide__body {
+    margin-top: 0.7rem;
+    opacity: 0;
+    line-height: 27px;
+    font-weight: 900;
+    font-size: large;
+}
+.c-slide__info {
+    transform: translateY(-150px);
+    transition: 0.8s ease;
+}
+
+.c-wrap {
+    padding: 2rem 0;
+    overflow: hidden;
+}
+.c-wrap--small {
+    max-width: 30%;
+}
+.c-wrap--line {
+    position: relative;
+}
+.c-wrap--line:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    bottom: 0;
+    transition: 0.9s ease;
+    transition-delay: 0.4s;
+}
+.slick-list {
+    overflow: visible !important;
+}
+.animateIn .c-slide__title--large, .initialAnimation .c-slide__title--large, .animateIn .c-slide__title--medium, .initialAnimation .c-slide__title--medium, .animateIn .c-slide__info, .initialAnimation .c-slide__info, .animateIn .c-slide__title, .initialAnimation .c-slide__title, .animateIn .c-slide__body, .initialAnimation .c-slide__body {
+    transform: translateY(0);
+    opacity: 1;
+}
+.animateIn .c-wrap--line:after, .initialAnimation .c-wrap--line:after {
+    left: 0;
+    transform: translateX(0);
+    width: 100%;
+}
+.slick-list {
+    transition: 0.5s ease;
+}
+.u-scale-out {
+    transform: scale(0.6) !important;
+    transition: 0.5s ease;
+}
+.u-scale-in {
+    transform: scale(1);
+}
+@media only screen and (max-width: 1300px) {
+    .c-slide__title {
+        font-size: 3em;
+   }
+    .c-slide__title--large {
+        font-size: 2em;
+   }
+    .c-wrap--small {
+        max-width: 50%;
+   }
+}
+@media only screen and (max-width: 800px) {
+    .c-slide__title--medium {
+        font-size: 1.3em;
+   }
+    .c-slide__title {
+        font-size: 1em;
+        font-weight: bold;
+   }
+    .c-slide__title--large {
+        font-size: 1.5em;
+   }
+    .c-wrap--small {
+        max-width: 80%;
+   }
+}
