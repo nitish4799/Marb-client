@@ -1,0 +1,72 @@
+.mainbg{
+  background: #0f0f0f;
+}
+.about-section {
+    padding: 120px 0;
+    background: #0f0f0f;
+  }
+  .about-section h1 {
+    font-size: 84px;
+    font-family: "Times New Roman";
+    text-transform: uppercase;
+  }
+  .about-section h3 {
+    font-family: Helvetica;
+    padding: 8px 0;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  .about-section p{
+    color: grey;
+  }
+  .about-link {
+    margin: 50px 0;
+  }
+  .project-section {
+    background: #0f0f0f;
+    padding-top: 120px;
+    overflow: hidden;
+  }
+  .project-section h1 {
+    font-size: 84px;
+    font-family: "Times New Roman";
+    text-transform: uppercase;
+    color: white;
+  }
+  .project-section p {
+    color: grey;
+    width: 100%;
+  }
+  .project-heading {
+    margin-bottom: 120px;
+  }
+  .project-section ion-icon {
+    color: white;
+    font-size: 148px;
+  }
+  .project-img {
+    width: 100%;
+    object-fit: cover;
+    height: 80vh;
+  }
+  .project {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .about-link {
+    margin: 50px 0;
+  }
+
+  .about-link a {
+    color: white;
+    padding: 18px 36px;
+    border: 1px solid white;
+    font-size: 12px;
+    letter-spacing: 4px;
+  }
+
+  .about-link a:hover {
+    text-decoration: none;
+    color: white;
+    background: black;
+  }

@@ -161,7 +161,7 @@ const Search = () => {
           </div>
 
           <div className="d-flex mx-2">
-            <Link to="/products">
+            <Link to="/products"  onClick={() => window.scrollTo(0, 0)}>
               <button type="button" className="sbtn d-flex btn text-white">
                 <div className="me-2 my-1">
                   <MdSearch />

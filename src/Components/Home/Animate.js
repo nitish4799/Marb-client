@@ -17,7 +17,7 @@ const Animate = () => {
         arrows: false,
         infinite: true,
         speed: 1200,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 8000,
         slidesToShow: 1,
         adaptiveHeight: true,
         autoplay: true,
@@ -41,7 +41,7 @@ const Animate = () => {
           setTimeout(() => {
             slideContainer.classList.remove(this.enterClass);
             $(".slick-current").addClass("animateIn");
-          }, 3000);
+          }, 1000);
         }
       };
     
@@ -57,7 +57,8 @@ const Animate = () => {
           event.preventDefault();
           transitionSetup.doTransition();
           i++;
-        } else {
+        } 
+        else {
           i = 0;
           transitionSetup.exitTransition();
         }

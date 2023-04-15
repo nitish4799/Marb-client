@@ -66,6 +66,11 @@ const Navbar = () => {
                   Enquiry
                 </Link>
               </li>
+              {/* <li className="nav-item px-3">
+                <Link className="nav-link" to="/blogs">
+                  Blogs
+                </Link>
+              </li> */}
             </ul>
 
             {/* <button class="btn btn-outline-primary" type="button">Log Out</button> */}

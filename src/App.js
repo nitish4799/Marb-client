@@ -14,6 +14,9 @@ import Products from './Components/productsPage/Products';
 import SingleProduct from './Components/productsPage/SingleProduct';
 import ErrorPage from './Components/ErrorPage';
 import Enquiry from './Components/Enquiry';
+import Granite from './Components/Home/ProductCategories/Granite';
+import Marble from './Components/Home/ProductCategories/Marble';
+import Arts from './Components/Home/ProductCategories/Arts';
 
 function App() {
   return (
@@ -32,6 +35,9 @@ function App() {
         <Route path="/products" element={<Products/>} />
         <Route path="/singleproduct/:id" element={<SingleProduct/>} />
         <Route path="/enquirycart" element={<Enquiry/>} />
+        <Route path="/marble" element={<Marble/>} />
+        <Route path="/granite" element={<Granite/>} />
+        <Route path="/arts" element={<Arts/>} />
         <Route path="*" element={<ErrorPage/>} />
       </Routes>
       <Footer/>

@@ -60,17 +60,17 @@ const Footer = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/aboutus">
+                                    <Link to="/aboutus" onClick={() => window.scrollTo(0, 0)}>
                                         about
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/contactus">
+                                    <Link to="/contactus" onClick={() => window.scrollTo(0, 0)}>
                                         contact
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/enquirycart">
+                                    <Link to="/enquirycart" onClick={() => window.scrollTo(0, 0)}>
                                         Your Inquiry
                                     </Link>
                                 </li>
@@ -85,17 +85,17 @@ const Footer = () => {
                             </h5>
                             <ul>
                                 <li>
-                                    <Link to="/aboutus">
+                                    <Link to="/aboutus" onClick={() => window.scrollTo(0, 0)}>
                                         History
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/contactus">
+                                    <Link to="/contactus" onClick={() => window.scrollTo(0, 0)}>
                                         About Company
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/">
+                                    <Link to="/" onClick={() => window.scrollTo(0, 0)}>
                                         Our Works
                                     </Link>
                                 </li>
@@ -110,22 +110,22 @@ const Footer = () => {
                             </h5>
                             <ul>
                                 <li>
-                                    <Link to="/financialanalyst">
+                                    <Link to="/financialanalyst" onClick={() => window.scrollTo(0, 0)}>
                                         Financial Analyst
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/installation">
+                                    <Link to="/installation" onClick={() => window.scrollTo(0, 0)}>
                                         Installation and Finishing
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/selectionconsultancy">
+                                    <Link to="/selectionconsultancy" onClick={() => window.scrollTo(0, 0)}>
                                         Marble Selection Consultancy
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/interior">
+                                    <Link to="/interior" onClick={() => window.scrollTo(0, 0)}>
                                         Interior Design
                                     </Link>
                                 </li>

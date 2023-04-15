@@ -26,7 +26,7 @@ const Services = () => {
                 We created this square foot calculator for the flooring to take the maths off your plate. Thanks to this tool, you can quickly estimate the flooring cost and calculate how much hardwood.
                 </p>
                 <div className="mt-5 d-flex justify-content-center">
-                <Link to="/financialanalyst" className="card-link mt-3">
+                <Link to="/financialanalyst" className="card-link mt-3" onClick={() => window.scrollTo(0, 0)}>
                   READ MORE
                 </Link>
                 </div>
@@ -40,7 +40,7 @@ const Services = () => {
                 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words
                 </p>
                 <div className="mt-5 d-flex justify-content-center">
-                <Link to="/installation" className="card-link mt-3">
+                <Link to="/installation" className="card-link mt-3" onClick={() => window.scrollTo(0, 0)}>
                 READ MORE
                 </Link>
                 </div>
@@ -54,7 +54,7 @@ const Services = () => {
                 Marble and granite have witnessed some aggressive marketing, primarily to win over the increased competition that picked up during the last decade, rather
                 </p>
                 <div className="mt-5 d-flex justify-content-center">
-                <Link to="/selectionconsultancy" className="card-link mt-3">
+                <Link to="/selectionconsultancy" className="card-link mt-3" onClick={() => window.scrollTo(0, 0)}>
                 READ MORE
                 </Link>
                 </div>
@@ -68,7 +68,7 @@ const Services = () => {
                 Interior designers make interior spaces functional, safe, and beautiful for almost every type of building. Interior designers make indoor spaces functional, safe.
                 </p>
                 <div className="mt-5 d-flex justify-content-center">
-                <Link to="/interior" className="card-link mt-3 pt-4">
+                <Link to="/interior" className="card-link mt-3 pt-4" onClick={() => window.scrollTo(0, 0)}>
                 READ MORE
                 </Link>
                 </div>
